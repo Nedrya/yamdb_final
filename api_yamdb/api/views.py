@@ -1,3 +1,5 @@
+from api import filter, permissions, serializers
+from reviews.models import Categories, Genre, Review, Title, User
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
@@ -9,9 +11,6 @@ from rest_framework.permissions import (IsAuthenticated,
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
-
-from api import filter, permissions, serializers
-from reviews.models import Categories, Genre, Review, Title, User
 
 
 class CreateViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
@@ -148,7 +147,7 @@ class CategoriesList(viewsets.ModelViewSet):
         queryset = Categories.objects.all()
         name = self.request.query_params.get('name')
         if name is not None:
-            queryset = queryset.filter(name=name)
+            return queryset.filter(name=name)
         return queryset
 
     def get_permissions(self):
