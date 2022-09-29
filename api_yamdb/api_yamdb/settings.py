@@ -12,7 +12,7 @@ ALLOWED_HOSTS = ['*']
 MAIL = 'from@example.com'
 
 
-# Application definition111
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
