@@ -75,6 +75,8 @@ jobs:
             key: ${{ secrets.SSH_KEY }}
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
+              echo $(pwd)
+              echo $(ls)
               sudo infra/docker-compose stop
               sudo infra/docker-compose rm web
               touch .env
