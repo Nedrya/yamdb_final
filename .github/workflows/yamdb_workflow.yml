@@ -67,7 +67,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: build_and_push_to_docker_hub
       steps:
-        - name: ls
+        - name: lss
           run: |
             echo $(ls)
         - name: executing remote ssh commands to deploy
@@ -78,8 +78,6 @@ jobs:
             key: ${{ secrets.SSH_KEY }}
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
-              echo $(pwd)
-              echo $(ls)
               sudo infra/docker-compose stop
               sudo infra/docker-compose rm web
               touch .env
