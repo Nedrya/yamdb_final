@@ -76,8 +76,8 @@ jobs:
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
               sudo docker-compose stop
-              ls
-              pwd
+              sudo ls
+              sudo pwd
               sudo docker-compose rm web
               pwd
               touch .env
