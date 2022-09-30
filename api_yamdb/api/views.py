@@ -22,7 +22,7 @@ class UserTokenObtainPairView(TokenObtainPairView):
 
 
 class UserViewSet(CreateViewSet):
-    """Создание пользователя"""
+    """Создание пользователя11"""
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
 
