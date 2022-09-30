@@ -5,7 +5,7 @@
 FROM python:3.7-slim
 # Создать директорию вашего приложения.
 WORKDIR  /app
-
+RUN pwd
 # Скопировать с локального компьютера файл зависимостей
 # в директорию /app.
 COPY api_yamdb/requirements.txt /.
@@ -13,7 +13,6 @@ COPY api_yamdb/requirements.txt /.
 # Копируем ENV.
 COPY infra/.env /.
 
-RUN pwd
 # Выполнить установку зависимостей внутри контейнера.
 RUN pip3 install -r /requirements.txt --no-cache-dir
 
