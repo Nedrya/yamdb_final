@@ -1,3 +1,6 @@
+![example workflow](https://github.com/Nedrya/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
+
 ### О проекте:
 
 Данный проект является классическим примером отзовика с возможностями API и автоматизированным развертыванием на виртуальном сервере при помощи программного обеспечения Docker.
@@ -67,10 +70,6 @@ sudo docker-compose up -d
 ```
 sudo docker-compose down
 ```
-
-### Бейдж о статусе работы workflow:
-
-![example workflow](https://github.com/Nedrya/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Информация:
 
