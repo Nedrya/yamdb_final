@@ -12,7 +12,7 @@ ALLOWED_HOSTS = ['nesite.sytes.net']
 MAIL = 'from@example.com'
 
 
-# Application definition
+# Application definition.
 
 INSTALLED_APPS = [
     'django.contrib.admin',
