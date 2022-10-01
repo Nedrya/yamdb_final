@@ -40,7 +40,6 @@ jobs:
     - name: pytest
       run: |
         # запуск pytest.
-        . venv/script/activate
         pytest
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
